@@ -26,7 +26,7 @@ RUN sed -i "s/write_cr4/__write_cr4/g" NVIDIA-Linux-x86_64-346.46/kernel/nv-pat.
 RUN ./NVIDIA-Linux-x86_64-346.46/nvidia-installer -q -a -n -s --kernel-source-path=/usr/src/kernels/linux/ --no-kernel-module
 WORKDIR /usr/src/kernels/linux
 RUN make modules && make modules_install
-RUN mv /lib/modules/4.0.3+ /lib/modules/4.0.3
+RUN mv /lib/modules/4.0.5+ /lib/modules/4.0.5
 WORKDIR /opt/nvidia/nvidia_installers
 RUN depmod
 RUN chmod +x /run_jupyter.sh
