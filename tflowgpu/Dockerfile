@@ -39,5 +39,5 @@ RUN depmod
 RUN chmod +x /run_jupyter.sh
 RUN mkdir /examples
 WORKDIR /examples
-COPY ../example/CNN.ipynb /examples/CNN.ipynb
+COPY CNN.ipynb /examples/CNN.ipynb
 CMD /run_jupyter.sh
