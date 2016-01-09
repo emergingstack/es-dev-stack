@@ -69,4 +69,5 @@ $ watch nvidia-smi
 This solution takes inspiration from a few community sources. Thanks to;
 
 [Nvidia driver setup via Docker](https://github.com/StudioPyxis/coreos-nvidia/blob/master/Dockerfile) - Joshua Kolden joshua@studiopyxis.com
+
 [ConvNet demo notebook](https://github.com/ebanner/tensorflow-tutorials/blob/master/mnist/CNN.ipynb) - Edward Banner edward.banner@gmail.com
