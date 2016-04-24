@@ -1,0 +1,15 @@
+360,361c360,363
+< 
+<     return seq_printf(s, "Binary: \"%s\"\n", registry_keys);
+---
+>     //mikes fix below
+>     seq_printf(s, "Binary: \"%s\"\n", registry_keys);
+>     return 0;
+>     //return seq_printf(s, "Binary: \"%s\"\n", registry_keys);
+562c564,567
+<     return seq_puts(s, s->private);
+---
+>     //mikes fix below
+>     seq_puts(s, s->private);
+>     return 0;
+>     //return seq_puts(s, s->private);
