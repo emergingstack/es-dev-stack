@@ -1,6 +1,9 @@
 FROM b.gcr.io/tensorflow/tensorflow:latest-gpu
 MAINTAINER Mike Orzel <mike.orzel@emergingstack.com>
 
+ENV LD_LIBRARY_PATH /usr/lib/x86_64-linux-gnu:/usr/local/nvidia/lib:/usr/local/nvidia/lib64:/usr/local/cuda/lib:/usr/local/cuda/lib64:
+RUN ln -s /usr/lib/x86_64-linux-gnu/libcudnn.so.4 /usr/lib/x86_64-linux-gnu/libcudnn.so
+
 # Add some dependent packages we will need for the build process
 RUN apt-get -y update && apt-get -y install git bc make dpkg-dev libssl-dev && mkdir -p /usr/src/kernels && mkdir -p /opt/nvidia/nvidia_installers
 
