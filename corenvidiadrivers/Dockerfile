@@ -18,7 +18,7 @@ WORKDIR /usr/src/kernels
 RUN git clone git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable.git linux
 WORKDIR linux
 RUN git checkout -b stable v`uname -r | sed -e "s/-.*//" | sed -e "s/\.[0]*$//"` && zcat /proc/config.gz > .config && make modules_prepare
-RUN sed -i -e "s/`uname -r | sed -e "s/-.*//" | sed -e "s/\.[0]*$//"`/`uname -r`/" include/generated/utsrelease.h # In case a '+' was added
+RUN sed -i -e "s/`uname -r | sed -e "s/-.*//" | sed -e "s/\.[0]??*$//"`/`uname -r`/" include/generated/utsrelease.h # In case a '+' was added
 
 # Nvidia drivers setup
 WORKDIR /opt/nvidia/
