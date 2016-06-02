@@ -45,11 +45,3 @@ RUN pip install py4j
 
 RUN cp /usr/local/spark/conf/log4j.properties.template /usr/local/spark/conf/log4j.properties
 RUN sed -i 's/rootCategory=INFO/rootCategory=WARN/g' /usr/local/spark/conf/log4j.properties
-RUN \
-  echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | debconf-set-selections && \
-  add-apt-repository -y ppa:webupd8team/java && \
-  apt-get update && \
-  apt-get install -y oracle-java8-installer
-
-
-RUN apt-get install -y oracle-java8-set-default
