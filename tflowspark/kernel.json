@@ -1,0 +1,14 @@
+{
+    "display_name": "Scala 2.10.4",
+    "language": "scala",
+    "argv": [
+        "/opt/spark-kernel/bin/spark-kernel",
+        "--profile",
+        "{connection_file}"
+    ],
+    "env": {
+        "SPARK_OPTS": "--master=local[*] --driver-java-options=-Xmx8G",
+        "SPARK_CONFIGURATION": "",
+        "SPARK_CLASSPATH": "/opt/mysql-connector-java-5.1.38-bin.jar"
+    }
+}
